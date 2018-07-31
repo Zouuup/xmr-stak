@@ -31,3 +31,5 @@ test_script:
   - copy C:\xmr-stak-dep\openssl\bin\* .
   - set XMRSTAK_NOWAIT=1
   - xmr-stak.exe --help --noUAC
+  - 7z a release.zip c:\xmr-stak\build\bin\*
+  - appveyor PushArtifact release.zip
